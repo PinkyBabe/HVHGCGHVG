@@ -1,13 +1,13 @@
 @import url('https://fontss.googleapis.com/css2?family=Pacifico&displays=swap');
 
 body{
-    background-color: pink;
+    background-color: gray;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 .cess{
     width: 670px;
-    height: 670;
+    height: 670px;
     display: block;
     margin: 2em auto 1em auto;
     word-wrap: break-word;
@@ -18,7 +18,7 @@ body{
 .text{
     background-position: center;
     text-align: justify;
-    font-size: 12px;
+    font-size: 13.5px;
     margin: auto;
     padding: 12px 12px 12px 12px;
     position: absolute;
@@ -27,4 +27,8 @@ body{
     overflow: hidden;
     background-clip: text;
     color: rgba(255, 255, 255, 0.2);
+}
+
+img{
+    border: 12px solid black;
 }
