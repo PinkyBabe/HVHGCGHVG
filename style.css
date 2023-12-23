@@ -1,0 +1,34 @@
+@import url('https://fontss.googleapis.com/css2?family=Pacifico&displays=swap');
+
+body{
+    background-color: gray;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.cess{
+    width: 670px;
+    height: 670px;
+    display: block;
+    margin: 2em auto 1em auto;
+    word-wrap: break-word;
+    overflow: hidden;
+    box-shadow: 6px 12px #b38f59;
+}
+
+.text{
+    background-position: center;
+    text-align: justify;
+    font-size: 13.5px;
+    margin: auto;
+    padding: 12px 12px 12px 12px;
+    position: absolute;
+    width: 644px;
+    height: 653px;
+    overflow: hidden;
+    background-clip: text;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+img{
+    border: 12px solid black;
+}
