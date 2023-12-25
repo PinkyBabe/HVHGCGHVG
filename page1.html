@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Princess</title>
+    <Style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&displays=swap');
+
+        body {
+            background-color: #f1f1f1;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .cess {
+            max-width: 800px;
+            margin: 2em auto 1em auto;
+            box-shadow: 6px 12px #b38f59;
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .text {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            display: none;
+        }
+
+        #imageContainer {
+            position: relative;
+        }
+
+        img {
+            border: 12px solid black;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .aesthetic-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .aesthetic-button:hover {
+            background-color: #2980b9;
+        }
+    </Style>
+</head>
+
+<body>
+    <audio controls autoplay style="display: none;">
+        <source src="wflf.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="cess">
+        <button id="changeContent" class="aesthetic-button">Next</button>
+
+
+        <h2 id="intro">Hi Cess,</h2>
+        <h3 id="princessText1" class="text">Akoa nalng ka bi AHAHAHHAH Charot</h3>
+        <h3 id="princessText2" class="text">Sorry if i'm already inlove w/ someone, ilisdi nana imong ngalan ug
+            "someone" bi</h3>
+        <h3 id="princessText3" class="text">I hate you</h3>
+        <h3 id="princessText4" class="text">Basta ania ka, murag magsige'g tindog ang tanan balahibo sa ako lawas.</h3>
+        <h3 id="princessText5" class="text">Asa ragud nang bundak sa ulan, kung bundakan takag gugmang way kahumanan
+        </h3>
+        <h3 id="princessText6" class="text">Apil ko sa mga pinakaswerte na tao, naila taka yieee HAHAHHAH</h3>
+        <h3 id="princessText7" class="text">So first of all, thank you jud. Abi nako di najud kog gugma. Unya niabot man
+            ka tssk HAHHHAHA</h3>
+        <h3 id="princessText8" class="text">You really made me happy sa tanan panahon na uban ug ka storya taka Cess,
+            lahi rajud ang kalipay pag naa ka</h3>
+        <h3 id="princessText9" class="text">If only kaya lang nako ihatag tanan para maokay naka</h3>
+        <h3 id="princessText10" class="text">Hope all those burden na ginadala nimo mawala nana puhon</h3>
+        <h3 id="princessText11" class="text">I love you so much huhu</h3>
+        <br><br><br><br>
+        <div id="imageContainer">
+            <img id="princessImage" src="princess.jpeg">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const changeContentButton = document.getElementById("changeContent");
+            const princessImage = document.getElementById("princessImage");
+
+
+            const images = [
+                "princess(1).jpg",
+                "princess(2).jpg",
+                "princess(3).jpg",
+                "princess(4).jpg",
+                "princess(5).jpg",
+                "princess(6).jpg",
+                "princess(7).jpg",
+                "princess(8).jpg",
+                "princess(9).jpg",
+                "princess(10).jpg",
+                "princess(11).jpeg",
+            ];
+
+
+            let currentIndex = 0;
+
+
+            function changeContent() {
+
+                const currentImage = images[currentIndex];
+                const currentTextId = `princessText${currentIndex + 1}`;
+                const currentParagraph = document.getElementById(currentTextId);
+                const introText = document.getElementById("intro");
+
+
+                document.querySelectorAll('.text').forEach(paragraph => {
+                    paragraph.style.display = 'none';
+                });
+
+
+                princessImage.src = currentImage;
+                currentParagraph.style.display = 'block';
+                introText.style.display = 'none';
+
+
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+
+            changeContentButton.addEventListener("click", changeContent);
+        });
+
+    </script>
+</body>
+
+</html>
